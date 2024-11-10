@@ -11,7 +11,7 @@ using NotesApplication.Data;
 namespace NotesApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241101112053_InitialCreate")]
+    [Migration("20241110213941_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -22,7 +22,8 @@ namespace NotesApplication.Migrations
 
             modelBuilder.Entity("NotesApplication.Models.Note", b =>
                 {
-                    b.Property<string>("NoteId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Content")
@@ -40,10 +41,10 @@ namespace NotesApplication.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
 
-                    b.HasKey("NoteId");
+                    b.HasKey("Id");
 
                     b.ToTable("Notes");
                 });

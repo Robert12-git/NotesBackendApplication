@@ -4,5 +4,5 @@ namespace NotesApplication.ModelsRequest;
 
 public class CreateNoteRequest : NoteRequest
 {
-    public int UserId { get; set; }
+    public Guid UserId { get; set; }
 }

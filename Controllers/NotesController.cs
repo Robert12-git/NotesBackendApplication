@@ -10,112 +10,63 @@ namespace NotesApplication.Controllers;
 public class NotesController(ILogger<NotesController> logger, INoteRepository noteRepository) : ControllerBase
 {
     [HttpPost]
-    public async Task<ActionResult<string>> CreateNote([FromBody] CreateNoteRequest? noteRequest)
+    public async Task<ActionResult<Guid>> CreateNote([FromBody] CreateNoteRequest noteRequest)
     {
-        if (noteRequest is null)
+        var note = new Note
         {
-            return BadRequest("Note cannot be null");
-        }
-
-        try
-        {
-            var note = new Note
-            {
-                NoteId = Guid.NewGuid().ToString(),
-                Title = noteRequest.Title,
-                Content = noteRequest.Content,
-                CreatedAt = DateTime.Now,
-                ModifiedAt = null,
-                UserId = noteRequest.UserId
-            };
+            Id = Guid.NewGuid(),
+            Title = noteRequest.Title,
+            Content = noteRequest.Content,
+            CreatedAt = DateTime.Now,
+            ModifiedAt = null,
+            UserId = noteRequest.UserId
+        };
             
-            var createdNote = await noteRepository.CreateNoteAsync(note);
-            return createdNote == null ? StatusCode(500, "Internal Server Error when creating a note") :
-                                        Ok(createdNote.NoteId);
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Error occurred while creating a note.");
-
-            return StatusCode(500, "An error occurred while creating the note.");
-        }
+        var createdNote = await noteRepository.CreateNoteAsync(note);
+        ArgumentNullException.ThrowIfNull(createdNote);
+            
+        return Ok(createdNote.Id);
     }
     
     [HttpGet("users/{userId}")]
-    public async Task<ActionResult<IEnumerable<Note>>> GetAllNotesByUser(int userId)
+    public async Task<ActionResult<IEnumerable<Note>>> GetAllNotesByUser(Guid userId)
     {
         var notes = await noteRepository.GetAllNotesByUserIdAsync(userId);
-
         return Ok(notes);
     }
     
     [HttpGet("{id}")]
-    public async Task<ActionResult<Note>> GetNoteById(string? id)
+    public async Task<ActionResult<Note>> GetNoteById(Guid id)
     {
-        if (id is null)
-        {
-            return BadRequest("Invalid id");
-        }
-
         var note = await noteRepository.GetNoteByIdAsync(id);
-        if (note is null)
-        {
-            return NotFound("Note not found");
-        }
+        ArgumentNullException.ThrowIfNull(note);
         
         return Ok(note);
     }
     
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateNote(string id, [FromBody] UpdateNoteRequest? updateNoteRequest)
+    public async Task<IActionResult> UpdateNote(Guid id, [FromBody] UpdateNoteRequest updateNoteRequest)
     {
-        if (updateNoteRequest == null)
-        {
-            return BadRequest("Invalid note data.");
-        }
-
         var existingNote = await noteRepository.GetNoteByIdAsync(id);
-        if (existingNote == null)
-        {
-            return NotFound("Note not found");
-        }
+        ArgumentNullException.ThrowIfNull(existingNote);
 
-        try
-        {
-            existingNote.Title = updateNoteRequest.Title;
-            existingNote.Content = updateNoteRequest.Content;
-            existingNote.ModifiedAt = DateTime.Now;
+        existingNote.Title = updateNoteRequest.Title;
+        existingNote.Content = updateNoteRequest.Content;
+        existingNote.ModifiedAt = DateTime.Now;
             
-            var updatedNote = await noteRepository.UpdateNoteAsync(existingNote);
-            if (updatedNote is null)
-            {
-                return NotFound("Note not found");
-            }
-            return Ok("Note updated");
-        }
-        catch
-        {
-            return StatusCode(500, "An error occurred while updating the note.");
-        }
+        var updatedNode = await noteRepository.UpdateNoteAsync(existingNote);
+        ArgumentNullException.ThrowIfNull(updatedNode);
+
+        return Ok(updatedNode);
     }
     
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteNoteById(string id)
+    public async Task<IActionResult> DeleteNoteById(Guid id)
     {
         var existingNote = await noteRepository.GetNoteByIdAsync(id);
-        if (existingNote == null)
-        {
-            return NotFound("Note not found");
-        }
+        ArgumentNullException.ThrowIfNull(existingNote);
 
-        try
-        {
-            var deleted = await noteRepository.DeleteNoteAsync(existingNote);
-            return !deleted ? StatusCode(500, "Internal Server Error when deleting the note.") : Ok("Note deleted");
-        }
-        catch (Exception)
-        {
-            return StatusCode(500, "An error occurred while deleting the note.");
-        }
+        await noteRepository.DeleteNoteAsync(existingNote);
+        return Ok("Note deleted");
     }
 }
