@@ -5,7 +5,7 @@ namespace NotesApplication.Models;
 public class User
 {
     [Key]
-    public int UserId { get; set; }
+    public Guid UserId { get; set; }
     
     [Required]
     [StringLength(50)]
@@ -18,5 +18,5 @@ public class User
     [StringLength(100)]
     public string PasswordHash { get; set; }
     
-    public virtual ICollection<Note> Notes { get; set; }
+    public ICollection<Note> Notes { get; set; }
 }

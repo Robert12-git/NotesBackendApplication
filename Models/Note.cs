@@ -6,7 +6,7 @@ namespace NotesApplication.Models;
 public class Note
 {
     [Key]
-    public string NoteId { get; set; }
+    public Guid Id { get; set; }
     
     [Required]
     [StringLength(100)]
@@ -18,8 +18,8 @@ public class Note
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? ModifiedAt { get; set; }
     
-    public int UserId { get; set; }
+    public Guid UserId { get; set; }
     
     // [ForeignKey("UserId")]
-    // public virtual User User { get; set; }
+    // public User User { get; set; }
 }

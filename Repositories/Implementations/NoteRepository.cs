@@ -10,20 +10,12 @@ public class NoteRepository(ApplicationDbContext context, ILogger<NoteRepository
     public async Task<Note?> CreateNoteAsync(Note note)
     {
         context.Notes.Add(note);
-        try
-        {
-            await context.SaveChangesAsync();
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, ex.Message);
-            return null;
-        }
+        await context.SaveChangesAsync();
         
         return note;
     }
 
-    public async Task<Note?> GetNoteByIdAsync(string id)
+    public async Task<Note?> GetNoteByIdAsync(Guid id)
     {
         return await context.Notes.FindAsync(id);
     }
@@ -31,36 +23,18 @@ public class NoteRepository(ApplicationDbContext context, ILogger<NoteRepository
     public async Task<Note?> UpdateNoteAsync(Note note)
     {
         context.Notes.Update(note);
-        try
-        {
-            await context.SaveChangesAsync();
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, ex.Message);
-            return null;
-        }
+        await context.SaveChangesAsync();
 
         return note;
     }
 
-    public async Task<bool> DeleteNoteAsync(Note note)
+    public async Task DeleteNoteAsync(Note note)
     {
-        try
-        {
-            context.Notes.Remove(note);
-            await context.SaveChangesAsync();
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, ex.Message);
-            return false;
-        }
-
-        return true;
+        context.Notes.Remove(note);
+        await context.SaveChangesAsync();
     }
 
-    public async Task<IEnumerable<Note>> GetAllNotesByUserIdAsync(int userId)
+    public async Task<IEnumerable<Note>> GetAllNotesByUserIdAsync(Guid userId)
     {
         return await context.Notes.Where(n => n.UserId == userId).ToListAsync();
     }
