@@ -4,14 +4,10 @@ namespace NotesApplication.Core.Models;
 
 public class Note
 {
-    [Key]
     public Guid Id { get; set; }
     
-    [Required]
-    [StringLength(100)]
     public string Title { get; set; }
     
-    [Required]
     public string Content { get; set; }
     
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

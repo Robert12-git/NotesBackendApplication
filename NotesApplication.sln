@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApplication.Services",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApplication.API", "NotesApplication.API\NotesApplication.API.csproj", "{80AD403E-19B3-4143-92BD-45687D65059B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApplication.Migrations", "NotesApplication.Migrations\NotesApplication.Migrations.csproj", "{749469C0-0446-49A3-AD1D-238C5646086C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{80AD403E-19B3-4143-92BD-45687D65059B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80AD403E-19B3-4143-92BD-45687D65059B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80AD403E-19B3-4143-92BD-45687D65059B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{749469C0-0446-49A3-AD1D-238C5646086C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{749469C0-0446-49A3-AD1D-238C5646086C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{749469C0-0446-49A3-AD1D-238C5646086C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{749469C0-0446-49A3-AD1D-238C5646086C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
