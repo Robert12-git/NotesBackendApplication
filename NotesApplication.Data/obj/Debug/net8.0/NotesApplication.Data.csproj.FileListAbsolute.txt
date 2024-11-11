@@ -1,0 +1,16 @@
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/bin/Debug/net8.0/NotesApplication.Data.deps.json
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/bin/Debug/net8.0/NotesApplication.Data.dll
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/bin/Debug/net8.0/NotesApplication.Data.pdb
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/bin/Debug/net8.0/NotesApplication.Core.dll
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/bin/Debug/net8.0/NotesApplication.Core.pdb
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.csproj.AssemblyReference.cache
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.AssemblyInfoInputs.cache
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.AssemblyInfo.cs
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.csproj.CoreCompileInputs.cache
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.sourcelink.json
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApp.686A2D1A.Up2Date
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.dll
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/refint/NotesApplication.Data.dll
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/NotesApplication.Data.pdb
+/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/Debug/net8.0/ref/NotesApplication.Data.dll

@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/robertciurea/Documents/notes-application/NotesApplication.API/NotesApplication.API.csproj": {}
+  },
+  "projects": {
+    "/Users/robertciurea/Documents/notes-application/NotesApplication.API/NotesApplication.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/robertciurea/Documents/notes-application/NotesApplication.API/NotesApplication.API.csproj",
+        "projectName": "NotesApplication.API",
+        "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.API/NotesApplication.API.csproj",
+        "packagesPath": "/Users/robertciurea/.nuget/packages/",
+        "outputPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/robertciurea/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj"
+              },
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj"
+              },
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Migrations/NotesApplication.Migrations.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Migrations/NotesApplication.Migrations.csproj"
+              },
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Services/NotesApplication.Services.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Services/NotesApplication.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentMigrator": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24474.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj",
+        "projectName": "NotesApplication.Core",
+        "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj",
+        "packagesPath": "/Users/robertciurea/.nuget/packages/",
+        "outputPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/robertciurea/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj",
+        "projectName": "NotesApplication.Data",
+        "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj",
+        "packagesPath": "/Users/robertciurea/.nuget/packages/",
+        "outputPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/robertciurea/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24474.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/robertciurea/Documents/notes-application/NotesApplication.Migrations/NotesApplication.Migrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/robertciurea/Documents/notes-application/NotesApplication.Migrations/NotesApplication.Migrations.csproj",
+        "projectName": "NotesApplication.Migrations",
+        "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Migrations/NotesApplication.Migrations.csproj",
+        "packagesPath": "/Users/robertciurea/.nuget/packages/",
+        "outputPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Migrations/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/robertciurea/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentMigrator": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/robertciurea/Documents/notes-application/NotesApplication.Services/NotesApplication.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/robertciurea/Documents/notes-application/NotesApplication.Services/NotesApplication.Services.csproj",
+        "projectName": "NotesApplication.Services",
+        "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Services/NotesApplication.Services.csproj",
+        "packagesPath": "/Users/robertciurea/.nuget/packages/",
+        "outputPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/robertciurea/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Core/NotesApplication.Core.csproj"
+              },
+              "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj": {
+                "projectPath": "/Users/robertciurea/Documents/notes-application/NotesApplication.Data/NotesApplication.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

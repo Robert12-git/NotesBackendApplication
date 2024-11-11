@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="6.2.0" />
+    <PackageReference Include="FluentMigrator.Runner" Version="6.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-rc.2.24474.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NotesApplication.Core\NotesApplication.Core.csproj" />
+    <ProjectReference Include="..\NotesApplication.Migrations\NotesApplication.Migrations.csproj" />
     <ProjectReference Include="..\NotesApplication.Services\NotesApplication.Services.csproj" />
     <ProjectReference Include="..\NotesApplication.Data\NotesApplication.Data.csproj" />
   </ItemGroup>
