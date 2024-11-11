@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotesApplication.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5176e748bd1102a205fb3ee1cb361e7424cc2bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e2bbf20cc9d36e703d5ad07d94a0c09b1bd7163")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotesApplication.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotesApplication.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
